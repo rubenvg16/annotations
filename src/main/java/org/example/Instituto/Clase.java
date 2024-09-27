@@ -3,30 +3,36 @@ package org.example.Instituto;
 import org.example.annotation.Estudiante;
 import org.example.annotation.Estudiantes;
 
- /*@Estudiante(
-        nombre = "jose",
-        fechaNacimiento = "01/01/2001",
-        curso = 2
+import java.util.ArrayList;
+import java.util.List;
+
+/*@Estudiante(
+       nombre = "jose",
+       fechaNacimiento = "01/01/2001",
+       curso = 2
 )
 @Estudiante(
-        nombre = "fran",
-        fechaNacimiento = "01/01/2001",
-        curso = 2
+       nombre = "fran",
+       fechaNacimiento = "01/01/2001",
+       curso = 2
 )*/
 @Estudiantes({
-        @Estudiante(nombre = "jose", fechaNacimiento = "01/01/2001", curso = 2),
+        @Estudiante(nombre = "jose", fechaNacimiento = "01/01/2001", curso = 1),
         @Estudiante(nombre = "fran", fechaNacimiento = "01/01/2001", curso = 2),
 })
 public class Clase {
-    private String curso;
     private String aula;
+    private int curso;
+    private List<org.example.Instituto.Estudiante> estudiantes = new ArrayList<>();
 
-    public Clase(String aula, String curso) {
-        this.aula = aula;
-        this.curso = curso;
+     public Clase() {
+     }
+
+     public Clase(int curso) {
+         this.curso = curso;
     }
 
-    public String getCurso() {
+    public int getCurso() {
         return curso;
     }
 
@@ -34,7 +40,7 @@ public class Clase {
         return aula;
     }
 
-    public void setCurso(String curso) {
+    public void setCurso(int curso) {
         this.curso = curso;
     }
 
@@ -43,4 +49,7 @@ public class Clase {
     }
 
 
+    public List<org.example.Instituto.Estudiante> getEstudiantes() {
+        return estudiantes;
+    }
 }

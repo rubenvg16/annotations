@@ -11,7 +11,7 @@ public class Estudiante {
     private int curso;
     private String direccion;
 
-    public Estudiante(String nombre, LocalDate fechaNacimiento, String direccion, int edad) {
+    public Estudiante(String nombre, LocalDate fechaNacimiento, int edad, String direccion) {
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
         this.direccion = direccion;
